@@ -1,0 +1,180 @@
+.header {
+	background: #000;
+	// padding: 72px 0 0 0;
+
+	&__logo {
+		position: relative;
+		letter-spacing: 10px;
+		font-size: 26px;
+		font-weight: 700;
+		color: #000000;
+		z-index: 1;
+		
+		//		open the svg in a code editor
+		//		add or rewrite the attribute of fill of every path to fill="currentcolor"
+		//		now, that svg will take the color of your font color, so you can do something like:
+		//			svg {
+		//				color : "red";
+		//			}
+		svg {
+			color: #fff;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		background: #f6a;
+		min-height: 20vh;
+		min-height: 8svh;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu {
+	// width: 100%;
+	// position: relative;
+	// overflow: hidden;
+	// align-self: flex-end;
+	// justify-self: flex-end;
+	// z-index: 9;
+
+	&__body {
+		z-index: 99;
+		overflow: auto;
+		padding: 120px 40px 40px 40px;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -100%;
+		background: #f43f6f;
+
+		@media (min-width:768px) {
+			overflow: visible;
+			position: relative;
+			padding: 10px 0 0 0;
+			background: none;
+			width: auto;
+			height: auto;
+			left: 0;
+		}
+	}
+
+	&__list {
+		@media (min-width:768px) {
+			display: flex;
+		}
+	}
+
+	&__item {
+		text-align: right;
+		margin-bottom: 26px;
+
+		@media (min-width:768px) {
+			text-align: left;
+			margin-bottom: 0;
+			margin-left: 50px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 12px;
+		color: #000;
+
+		@media (min-width:$mobile) {
+			opacity: 1;
+			display: inline-block;
+			font-size: 13px;
+		}
+	}
+
+	@media (min-width:$mobile) {
+		z-index: 1;
+	}
+}
+
+//Burger
+
+.icon-menu {
+	margin-top: 0.2125rem;
+	display: block;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	width: 26px;
+	height: 16px;
+	z-index: 99999999;
+
+	@media (any-hover: none) {
+		cursor: default;
+	}
+
+	&__center,
+	&__before,
+	&__after {
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: rem(2);
+		background-color: #000;
+	}
+
+	&__before {
+		top: 0;
+	}
+
+	&__after {
+		bottom: 0;
+	}
+
+	&__center {
+		top: 50%;
+		transform: translateY(-50%);
+		width: 80%;
+		right: 0;
+		left: auto;
+	}
+
+	// .menu-open & {
+	// 	&__center {
+	// 		background-color: #fff;
+	// 		width: 0;
+	// 	}
+
+	// 	&__before,
+	// 	&__after {
+	// 		background-color: #fff;
+	// 	}
+
+	// 	&__before {
+	// 		top: calc(50% - rem(1));
+	// 		transform: rotate(-45deg);
+	// 	}
+
+	// 	&__after {
+	// 		bottom: calc(50% - rem(1));
+	// 		transform: rotate(45deg);
+	// 	}
+	// }
+
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}

@@ -1,0 +1,16 @@
+html(lang="en")
+	head
+		include scss/pages/head
+		title Home
+	body
+		button.menu__icon.icon-menu(type="button" title="menu button")
+			span.icon-menu__before
+			span.icon-menu__center
+			span.icon-menu__after
+		.wrapper
+			include scss/pages/header
+			include scss/pages/index/01_hero
+			main.page
+				//- include scss/pages/index/02_clients
+
+			include scss/pages/footer
